@@ -34,13 +34,13 @@ const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
 ╭──────────────────❂
-┊❄️╭───*𝐆𝐌𝐀𝐗 𝐀𝐈*────❂
-┊❄️┊ *𝐔𝐬𝐞𝐫* : ${s.OWNER_NAME}
-┊❄️┊ *𝐌𝐨𝐝𝐞* : ${mode}
-┊❄️╰───────────────❂
-┊❄️┊ *𝐓𝐢𝐦𝐞* : ${temps}  
-┊❄️┊ *𝐑𝐀𝐌* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
-┊🎄╰───────────────❂
+┊🇹🇿╭───*𝐆𝐌𝐀𝐗 𝐀𝐈*────❂
+┊🇹🇿┊ *𝐔𝐬𝐞𝐫* : ${s.OWNER_NAME}
+┊🇹🇿┊ *𝐌𝐨𝐝𝐞* : ${mode}
+┊🇹🇿╰───────────────❂
+┊🇹🇿┊ *𝐓𝐢𝐦𝐞* : ${temps}  
+┊🇹🇿┊ *𝐑𝐀𝐌* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
+┊🥳╰───────────────❂
 ╰──────────────────❂ \n\n`;
  
     let menuMsg=`  
@@ -51,7 +51,7 @@ const date = moment().format('DD/MM/YYYY');
         menuMsg += `*╭────❂* *${cat}* *❂*`;
         for (const cmd of coms[cat]) {
             menuMsg += `  
-*┊🚦* ${cmd}`;
+*┊🏅* ${cmd}`;
         }
         menuMsg += `
 *╰═════════════❂* \n`
