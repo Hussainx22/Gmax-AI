@@ -17,7 +17,7 @@ zokou({
   const { ms, repondre, arg } = commandeOptions;
      
   if (!arg[0]) {
-    repondre("wrong!!! Ie. _Play hozambe by Gmax ft shifura._");
+    repondre("wrong!!! Ie. _Play hozambe by Gmax Ai._");
     return;
   }
 
@@ -38,7 +38,7 @@ zokou({
 *Url :* _${videos[0].url}_
 
 
-_*©ɢᴍᴀx*_`
+_*©Gmax*_`
        }
 
       
