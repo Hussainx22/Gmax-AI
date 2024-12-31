@@ -1,3 +1,4 @@
+/**
 const {zokou}=require("../framework/zokou") ;
 
 
@@ -35,3 +36,4 @@ await zk.sendMessage(dest,{video:{url:video},caption:texte},{quoted:ms})
 
 
 })
+**/
