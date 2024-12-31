@@ -85,7 +85,7 @@ zokou({
           'image': {
             'url': _0x2e073d[0].thumbnail
           },
-          'caption': "LUCKY MD SONG DOWLOADER\n\n╭━━━━••••⊷••───•∞•\n┊ *Title:* " + _0x2e073d[0].title + "\n┊ *Quality:* mp3 (320kbps)\n┊ *Duration:* " + _0x2e073d[0].timestamp + "\n┊ *Viewers:* " + _0x2e073d[0].views + "\n┊ *Uploaded:* " + _0x2e073d[0].ago + "\n┊ *Artist:* " + _0x2e073d[0].author.name + "\n╰━━━━••••⊷••───•∞•\n❁ *Direct YtLink:* " + _0x2802ea + "\n\n╭───•••∞•••━━━━──••\nMade By Mr Gmax\n╰───•••∞•••━━━━──••"
+          'caption': "GMAX AI SONG DOWLOADER\n\n╭━━━━••••⊷••───•∞•\n┊ *Title:* " + _0x2e073d[0].title + "\n┊ *Quality:* mp3 (320kbps)\n┊ *Duration:* " + _0x2e073d[0].timestamp + "\n┊ *Viewers:* " + _0x2e073d[0].views + "\n┊ *Uploaded:* " + _0x2e073d[0].ago + "\n┊ *Artist:* " + _0x2e073d[0].author.name + "\n╰━━━━••••⊷••───•∞•\n❁ *Direct YtLink:* " + _0x2802ea + "\n\n╭───•••∞•••━━━━──••\nMade By Mr Gmax\n╰───•••∞•••━━━━──••"
         };
         await _0x5a8163.sendMessage(_0x21cd5b, _0x42120f, {
           'quoted': _0x1ec728
