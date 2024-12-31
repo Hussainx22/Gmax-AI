@@ -1,3 +1,4 @@
+/**
 const { zokou } = require("../framework/zokou");
 const fancy = require("../Anyway/style");
 
@@ -22,3 +23,4 @@ zokou({ nomCom: "fancy", categorie: "Fun", reaction: "〽️" }, async (dest, zk
         return await repondre('_Une erreur s\'est produite :(_');
     }
 });
+**/
