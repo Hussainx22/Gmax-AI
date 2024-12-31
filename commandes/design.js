@@ -1,3 +1,4 @@
+/**
 (function (_0x18de37, _0x34c97a) {
   const _0x57f692 = _0x18de37();
   while (true) {
@@ -194,5 +195,5 @@ function _0x9cf452(_0x4fde11) {
     }
   } catch (_0x4a9db5) {}
 }
-
+**/
 // Steal at your own risk ☠👾
