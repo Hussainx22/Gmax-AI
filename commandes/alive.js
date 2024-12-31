@@ -10,8 +10,8 @@ zokou(
     // URLs and configurations
     const fullImageUrl = "https://files.catbox.moe/0vv5mg.jpeg"; // Full image URL
     const smallThumbnailUrl = "https://files.catbox.moe/0vv5mg.jpeg"; // Small thumbnail URL
-    const randomAudio = "https://files.catbox.moe/wdap4t.mp3"; // Voice note URL
-    const sourceUrl = "https://whatsapp.com/channel/0029VaihcQv84Om8LP59fO3f"; // Channel link
+    const randomAudio = "https://files.catbox.moe/z4frfn.mp3"; // Voice note URL
+    const sourceUrl = "https://whatsapp.com/channel/0029VaFytPbAojYm7RIs6l1x"; // Channel link
     const contactName = commandeOptions?.ms?.pushName || "Unknown Contact"; // Sender's name or "Unknown Contact"
 
     try {
@@ -24,7 +24,7 @@ zokou(
         ptt: true, // Send as a voice note
         contextInfo: {
           externalAdReply: {
-            title: `💦 Message from: ${contactName}\n🔥Lucky Md Alive🔥`, // Your contact in WhatsApp status format
+            title: `💦 Message from: ${contactName}\nGmax Ai Alive🔥`, // Your contact in WhatsApp status format
             body: "Yoh don't disturb am active🥱 Tap here",
             thumbnailUrl: smallThumbnailUrl, // Small thumbnail displayed below
             mediaType: 1, // Indicate this is an image
@@ -57,8 +57,8 @@ zokou(
     // URLs and configurations
     const fullImageUrl = "https://files.catbox.moe/0vv5mg.jpeg"; // Full image URL
     const smallThumbnailUrl = "https://files.catbox.moe/0vv5mg.jpeg"; // Small thumbnail URL
-    const randomAudio = "https://files.catbox.moe/wdap4t.mp3"; // Voice note URL
-    const sourceUrl = "https://whatsapp.com/channel/0029VaihcQv84Om8LP59fO3f"; // Channel link
+    const randomAudio = "https://files.catbox.moe/z4frfn.mp3"; // Voice note URL
+    const sourceUrl = "https://whatsapp.com/channel/0029VaFytPbAojYm7RIs6l1x"; // Channel link
     const contactName = commandeOptions?.ms?.pushName || "Unknown Contact"; // Sender's name or "Unknown Contact"
 
     try {
@@ -71,7 +71,7 @@ zokou(
         ptt: true, // Send as a voice note
         contextInfo: {
           externalAdReply: {
-            title: `🌟 Message from: ${contactName}\n🔥 Lucky Md Alive 🔥`, // Your contact in WhatsApp status format
+            title: `🌟 Message from: ${contactName}\nGmax Ai Alive 🔥`, // Your contact in WhatsApp status format
             body: "Yoh don't disturb am active🥱 Tap here",
             thumbnailUrl: smallThumbnailUrl, // Small thumbnail displayed below
             mediaType: 1, // Indicate this is an image
