@@ -8,7 +8,7 @@
 
 
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=DAA520&center=true&width=910&height=100&lines=LUCKY+MD+TEAM+WISH+YOU;🎄MERRY+CHRISTMAS🎄;🎊AND+HAPPY+NEW+YEAR🎊;KEEP+USING+LUCKY+MD" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=DAA520&center=true&width=910&height=100&lines=GMAX+AI+TEAM+WISH+YOU+HAPPY+NEW+YEAR🎊;KEEP+USING+GMAX+AI" alt="Typing SVG" /></a>
   </p>
 
 
