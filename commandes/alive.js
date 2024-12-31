@@ -8,8 +8,8 @@ zokou(
     console.log("Alive command triggered!");
 
     // URLs and configurations
-    const fullImageUrl = "https://files.catbox.moe/0vv5mg.jpeg"; // Full image URL
-    const smallThumbnailUrl = "https://files.catbox.moe/0vv5mg.jpeg"; // Small thumbnail URL
+    const fullImageUrl = "https://files.catbox.moe/e6ifiq.jpeg"; // Full image URL
+    const smallThumbnailUrl = "https://files.catbox.moe/e6ifiq.jpeg"; // Small thumbnail URL
     const randomAudio = "https://files.catbox.moe/z4frfn.mp3"; // Voice note URL
     const sourceUrl = "https://whatsapp.com/channel/0029VaFytPbAojYm7RIs6l1x"; // Channel link
     const contactName = commandeOptions?.ms?.pushName || "Unknown Contact"; // Sender's name or "Unknown Contact"
@@ -55,8 +55,8 @@ zokou(
     console.log("Alive command triggered!");
 
     // URLs and configurations
-    const fullImageUrl = "https://files.catbox.moe/0vv5mg.jpeg"; // Full image URL
-    const smallThumbnailUrl = "https://files.catbox.moe/0vv5mg.jpeg"; // Small thumbnail URL
+    const fullImageUrl = "https://files.catbox.moe/e6ifiq.jpeg"; // Full image URL
+    const smallThumbnailUrl = "https://files.catbox.moe/e6ifiq.jpeg"; // Small thumbnail URL
     const randomAudio = "https://files.catbox.moe/z4frfn.mp3"; // Voice note URL
     const sourceUrl = "https://whatsapp.com/channel/0029VaFytPbAojYm7RIs6l1x"; // Channel link
     const contactName = commandeOptions?.ms?.pushName || "Unknown Contact"; // Sender's name or "Unknown Contact"
