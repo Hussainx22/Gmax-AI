@@ -16,7 +16,7 @@ zokou({
     'image': {
       'url': "https://telegra.ph/file/c90fdab5f133a946d6f4f.jpg"
     },
-    'caption': "🚗𝗥𝗮𝗻𝗱𝗼𝗺 𝘄𝗮𝗹𝗹𝗽𝗮𝗽𝗲𝗿 \n\n 🚘Download it and set it to your wallpaper 𝗙𝗿𝗼𝗺 (LUCKY-𝗠𝗗)🚗MADE BY FREDIE 𝗧𝗘𝗖𝗛"
+    'caption': "⬅️𝗥𝗮𝗻𝗱𝗼𝗺 𝘄𝗮𝗹𝗹𝗽𝗮𝗽𝗲𝗿 \n\n ⬅️Download it and set it to your wallpaper 𝗙𝗿𝗼𝗺 (GMAX-AI)⬅️MADE BY FREDIE 𝗧𝗘𝗖𝗛"
   });
 });
 console.log("mon test");
