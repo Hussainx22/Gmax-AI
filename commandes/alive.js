@@ -93,7 +93,8 @@ zokou(
 console.log("WhatsApp bot is ready!");
 
 
-/*const { zokou } = require('../framework/zokou');
+/**
+const { zokou } = require('../framework/zokou');
 const {addOrUpdateDataInAlive , getDataFromAlive} = require('../bdd/alive')
 const moment = require("moment-timezone");
 const s = require(__dirname + "/../set");
@@ -187,3 +188,4 @@ repondre(' Holla🥴, *GMAX AI BOT* is alive just like you g. ')
 
 }
     });
+**/
