@@ -46,7 +46,7 @@ const date = moment().format('DD/MM/YYYY');
  ${message}
  
  
- *ENZO-MD-WABOT*`
+ *GMAX-MD-WABOT*`
 
  if (lien.match(/\.(mp4|gif)$/i)) {
     try {
@@ -77,7 +77,7 @@ else {
         if(!superUser) { repondre("NIPO ALIVE MKUU😂") ; return};
 
       await   repondre("USIOGOPE SI UNAJUA GMAX AI HAIWEZI LALA NO MATTER WHAT");
-         repondre("EBU MAINTAIN HIVO HIVO :)")
+         repondre("BOT IS ACTIVE :)")
      }
  } else {
 
