@@ -1,214 +1,75 @@
-const axios = require("axios");
-const {zokou} = require("../framework/zokou");
-const traduire = require("../framework/traduction");
-const {Sticker ,StickerTypes}= require('wa-sticker-formatter');
-
+const {
+  zokou
+} = require("../framework/zokou");
+const {
+  getBuffer
+} = require("../framework/dl/Function");
+const speed = require("performance-now");
+const runtime = function (_0x10e989) {
+  _0x10e989 = Number(_0x10e989);
+  var _0x3030ed = Math.floor(_0x10e989 / 86400);
+  var _0x5cc980 = Math.floor(_0x10e989 % 86400 / 3600);
+  var _0x5e4c25 = Math.floor(_0x10e989 % 3600 / 60);
+  var _0x2493b6 = Math.floor(_0x10e989 % 60);
+  var _0x18371c = _0x3030ed > 0 ? _0x3030ed + (_0x3030ed == 1 ? " day, " : " d, ") : '';
+  var _0x405b92 = _0x5cc980 > 0 ? _0x5cc980 + (_0x5cc980 == 1 ? " hour, " : " h, ") : '';
+  var _0xb1d8c1 = _0x5e4c25 > 0 ? _0x5e4c25 + (_0x5e4c25 == 1 ? " minute, " : " m, ") : '';
+  var _0x4ee62c = _0x2493b6 > 0 ? _0x2493b6 + (_0x2493b6 == 1 ? " second" : " s") : '';
+  return _0x18371c + _0x405b92 + _0xb1d8c1 + _0x4ee62c;
+};
+let timestamp = speed();
+let flashspeed = (speed() - timestamp).toFixed(4);
 zokou({
-  nomCom: "ranime",
-  categorie: "Fun",
-  reaction: "📺"
-},
-async (origineMessage, zk, commandeOptions) => {
-  const { repondre, ms } = commandeOptions;
-
-  const jsonURL = "https://api.jikan.moe/v4/random/anime"; // Remplacez par votre URL JSON
-
-  try {
-    const response = await axios.get(jsonURL);
-    const data = response.data.data;
-
-    const title = data.title;
-    const synopsis = data.synopsis;
-    const imageUrl = data.images.jpg.image_url; // Utilisez l'URL de l'image JPG
-    const episodes = data.episodes;
-    const status = data.status;
-
-    //const texttraduit = await traduire(synopsis,{ to: 'fr' })
-
-    const message = `📺 Titre: ${title}\n🎬 Épisodes: ${episodes}\n📡 Statut: ${status}\n📝 Synopsis: ${synopsis}\n🔗 URL: ${data.url}`;
-    
-    // Envoyer l'image et les informations
-    zk.sendMessage(origineMessage, { image: { url: imageUrl }, caption: message }, { quoted: ms });
-  } catch (error) {
-    console.error('Error retrieving data from JSON :', error);
-    repondre('Error retrieving data from JSON.');
-  }
+  'nomCom': "ping",
+  'desc': "To check ping",
+  'Categorie': "General",
+  'reaction': '📡',
+  'fromMe': "true"
+}, async (_0x1c57c2, _0x592785, _0x282835) => {
+  const {
+    ms: _0x177695,
+    arg: _0x402724,
+    repondre: _0x2c0d2b
+  } = _0x282835;
+  await _0x2c0d2b("*ENZO-MD SPEED :" + flashspeed + " MS* ");
 });
-
 zokou({
-  nomCom: "google",
-  categorie: "Search"
-}, async (dest, zk, commandeOptions) => {
-  const { arg, repondre } = commandeOptions;
-  
-  if (!arg[0] || arg === "") {
-    repondre("Give me a query.\n*Example: .google What is a bot.*");
-    return;
-  }
-
-  const google = require('google-it');
-  try {
-    const results = await google({ query: arg.join(" ") });
-    let msg = `Google search for : ${arg}\n\n`;
-
-    for (let result of results) {
-      msg += `➣ Title : ${result.title}\n`;
-      msg += `➣ Description : ${result.snippet}\n`;
-      msg += `➣ Link : ${result.link}\n\n────────────────────────\n\n`;
-    }
-    
-   // const trdmsg = await traduire(msg,{to : 'fr'})
-    repondre(msg);
-  } catch (error) {
-    repondre("An error occurred during Google search.");
-  }
+  'nomCom': "uptime",
+  'desc': "To check runtime",
+  'Categorie': "General",
+  'reaction': '🎭',
+  'fromMe': "true"
+}, async (_0x42052a, _0x2cadb5, _0x100e6b) => {
+  const {
+    ms: _0x419b36,
+    arg: _0x3e4682,
+    repondre: _0x24712f
+  } = _0x100e6b;
+  await _0x24712f("*_Uptime of Gmax-AI is: " + runtime(process.uptime()) + '_*');
 });
-
 zokou({
-  nomCom: "imdb",
-  categorie: "Search"
-}, async (dest, zk, commandeOptions) => {
-  const { arg, repondre , ms } = commandeOptions;
-
-  if (!arg[0] || arg === "") {
-    repondre("give the name of a series or film.");
-    return;
+  'nomCom': 'ss',
+  'desc': "screenshots website",
+  'Categorie': "General",
+  'reaction': '🎥',
+  'fromMe': "true"
+}, async (_0xb9d834, _0x90a7c0, _0xc17ce9) => {
+  const {
+    ms: _0xbfd4ce,
+    arg: _0x101ab2,
+    repondre: _0x4aea14
+  } = _0xc17ce9;
+  if (!_0x101ab2 || _0x101ab2.length === 0) {
+    return _0x4aea14("provide a link...");
   }
-
-  try {
-    
-    const response = await axios.get(`http://www.omdbapi.com/?apikey=742b2d09&t=${arg}&plot=full`);
-    const imdbData = response.data;
-
-    let imdbInfo = "⚍⚎⚎⚎⚎⚎⚎⚎⚎⚎⚎⚎⚎⚎⚎⚍\n";
-    imdbInfo += " ``` 𝕀𝕄𝔻𝔹 𝕊𝔼𝔸ℝℂℍ```\n";
-    imdbInfo += "⚎⚎⚎⚎⚎⚎⚎⚎⚎⚎⚎⚎⚎⚎⚎⚎\n";
-    imdbInfo += "🎬Title    : " + imdbData.Title + "\n";
-    imdbInfo += "📅year      : " + imdbData.Year + "\n";
-    imdbInfo += "⭐Assessment : " + imdbData.Rated + "\n";
-    imdbInfo += "📆Release    : " + imdbData.Released + "\n";
-    imdbInfo += "⏳Runtime     : " + imdbData.Runtime + "\n";
-    imdbInfo += "🌀Genre      : " + imdbData.Genre + "\n";
-    imdbInfo += "👨🏻‍💻Director : " + imdbData.Director + "\n";
-    imdbInfo += "✍writers : " + imdbData.Writer + "\n";
-    imdbInfo += "👨actors  : " + imdbData.Actors + "\n";
-    imdbInfo += "📃Synopsis  : " + imdbData.Plot + "\n";
-    imdbInfo += "🌐Language  : " + imdbData.Language + "\n";
-    imdbInfo += "🌍Contry      : " + imdbData.Country + "\n";
-    imdbInfo += "🎖️Awards : " + imdbData.Awards + "\n";
-    imdbInfo += "📦BoxOffice : " + imdbData.BoxOffice + "\n";
-    imdbInfo += "🏙️Production : " + imdbData.Production + "\n";
-    imdbInfo += "🌟score : " + imdbData.imdbRating + "\n";
-    imdbInfo += "❎imdbVotes : " + imdbData.imdbVotes + "";
-
-    zk.sendMessage(dest, {
-      image: {
-        url: imdbData.Poster,
-      },
-      caption: imdbInfo,
-    }, {
-      quoted: ms,
-    });
-  } catch (error) {
-    repondre("An error occurred while searching IMDb.");
-  }
+  const _0x2afa0b = _0x101ab2.join(" ");
+  let _0x10a198 = "https://api.maher-zubair.tech/misc/sstab?url=" + _0x2afa0b + "&dimension=720x720";
+  let _0x67c929 = await getBuffer(_0x10a198);
+  await _0x90a7c0.sendMessage(_0xb9d834, {
+    'image': _0x67c929
+  }, {
+    'caption': "*Powered by GMAX-AI*"
+  }, {
+    'quoted': _0xbfd4ce
+  });
 });
-
-zokou({
-  nomCom: "movie",
-  categorie: "Search"
-}, async (dest, zk, commandeOptions) => {
-  const { arg, repondre , ms } = commandeOptions;
-
-  if (!arg[0] || arg === "") {
-    repondre("give the name of a series or film.");
-    return;
-  }
-
-  try {
-    
-    const response = await axios.get(`http://www.omdbapi.com/?apikey=742b2d09&t=${arg}&plot=full`);
-    const imdbData = response.data;
-
-    let imdbInfo = "Tap on the link to join movie channel on telegram and download movies there : https://t.me/ibrahimtechai\n";
-    imdbInfo += " ``` BMW MD FILMS```\n";
-    imdbInfo += "*Made by Ibrahim Adams*\n";
-    imdbInfo += "🎬Title    : " + imdbData.Title + "\n";
-    imdbInfo += "📅year      : " + imdbData.Year + "\n";
-    imdbInfo += "⭐Assessment : " + imdbData.Rated + "\n";
-    imdbInfo += "📆Release    : " + imdbData.Released + "\n";
-    imdbInfo += "⏳Runtime     : " + imdbData.Runtime + "\n";
-    imdbInfo += "🌀Genre      : " + imdbData.Genre + "\n";
-    imdbInfo += "👨🏻‍💻Director : " + imdbData.Director + "\n";
-    imdbInfo += "✍writers : " + imdbData.Writer + "\n";
-    imdbInfo += "👨actors  : " + imdbData.Actors + "\n";
-    imdbInfo += "📃Synopsis  : " + imdbData.Plot + "\n";
-    imdbInfo += "🌐Language  : " + imdbData.Language + "\n";
-    imdbInfo += "🌍Contry      : " + imdbData.Country + "\n";
-    imdbInfo += "🎖️Awards : " + imdbData.Awards + "\n";
-    imdbInfo += "📦BoxOffice : " + imdbData.BoxOffice + "\n";
-    imdbInfo += "🏙️Production : " + imdbData.Production + "\n";
-    imdbInfo += "🌟score : " + imdbData.imdbRating + "\n";
-    imdbInfo += "❎imdbVotes : " + imdbData.imdbVotes + "";
-
-    zk.sendMessage(dest, {
-      image: {
-        url: imdbData.Poster,
-      },
-      caption: imdbInfo,
-    }, {
-      quoted: ms,
-    });
-  } catch (error) {
-    repondre("An error occurred while searching IMDb.");
-  }
-});
-
-zokou({
-  nomCom: "emomix",
-  categorie: "Conversion"
-}, async (dest, zk, commandeOptions) => {
-  const { arg, repondre,ms , nomAuteurMessage } = commandeOptions;
-
-  if (!arg[0] || arg.length !== 1) {
-    repondre("Incorrect use. Example: .emojimix 😀;🥰");
-    return;
-  }
-
-  // Divisez la chaîne en deux emojis en utilisant le point-virgule comme séparateur
-  const emojis = arg.join(' ').split(';');
-
-  if (emojis.length !== 2) {
-    repondre("Please specify two emojis using a ';' as a separator.");
-    return;
-  }
-
-  const emoji1 = emojis[0].trim();
-  const emoji2 = emojis[1].trim();
-
-  try {
-    const axios = require('axios');
-    const response = await axios.get(`https://levanter.onrender.com/emix?q=${emoji1}${emoji2}`);
-
-    if (response.data.status === true) {
-      // Si la requête a réussi, envoyez l'image résultante
-      
-      let stickerMess = new Sticker(response.data.result, {
-        pack: nomAuteurMessage,
-        type: StickerTypes.CROPPED,
-        categories: ["🤩", "🎉"],
-        id: "12345",
-        quality: 70,
-        background: "transparent",
-      });
-      const stickerBuffer2 = await stickerMess.toBuffer();
-      zk.sendMessage(dest, { sticker: stickerBuffer2 }, { quoted: ms });
-
-    } else {
-      repondre("Unable to create emoji mix.");
-    }
-  } catch (error) {
-    repondre("An error occurred while creating the emoji mix." + error );
-  }
-});
-
