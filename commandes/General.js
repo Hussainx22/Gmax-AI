@@ -95,7 +95,7 @@ else {
 zokou({ nomCom: "support", categorie: "General" }, async (dest, zk, commandeOptions) => {
   const { ms, repondre, auteurMessage, } = commandeOptions; 
  
-  repondre("THANK YOU FOR CHOOSING ENZO, HERE ARE OUR SUPPORTIVE LINKS\n\n ☉ CHANNEL LINK IS HERE ☉ \n\n❒⁠⁠⁠⁠[https://whatsapp.com/channel/0029VaFytPbAojYm7RIs6l1x] \n\n ☉ GROUP LINK IS HERE ☉\n\n❒⁠⁠⁠⁠[https://whatsapp.com/channel/0029VaFytPbAojYm7RIs6l1x] \n\n ☉YOUTUBE LINK IS HERE ☉\n\n❒⁠⁠⁠⁠[https://www.youtube.com/@gmaxtv1661 \n\n\n*Created By ENZO") 
+  repondre("THANK YOU FOR CHOOSING ENZO, HERE ARE OUR SUPPORTIVE LINKS\n\n ☉ CHANNEL LINK IS HERE ☉ \n\n❒⁠⁠⁠⁠[https://whatsapp.com/channel/0029VaFytPbAojYm7RIs6l1x] \n\n ☉ GROUP LINK IS HERE ☉\n\n❒⁠⁠⁠⁠[https://whatsapp.com/channel/0029VaFytPbAojYm7RIs6l1x] \n\n ☉YOUTUBE LINK IS HERE ☉\n\n❒⁠⁠⁠⁠[https://www.youtube.com/@gmaxtv1661 \n\n\n*Created By Gmax") 
   await zk.sendMessage(auteurMessage,{text : `THANK YOU FOR CHOOSING GMAX,MAKE SURE YOU FOLLOW THESE LINKS. `},{quoted :ms})
 
 })
