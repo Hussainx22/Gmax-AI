@@ -5,8 +5,10 @@ const { format } = require(__dirname + "/../framework/mesfonctions");
 const os = require("os");
 const moment = require("moment-timezone");
 const s = require(__dirname + "/../set");
+const more = String.fromCharCode(8206)
+const readmore = more.repeat(4001)
 
-zokou({ nomCom: "menu1", categorie: "General" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions) => {
     let { ms, repondre ,prefixe,nomAuteurMessage,mybotpic} = commandeOptions;
     let { cm } = require(__dirname + "/../framework//zokou");
     var coms = {};
@@ -18,63 +20,54 @@ zokou({ nomCom: "menu1", categorie: "General" }, async (dest, zk, commandeOption
 
 
     
-
-    cm.map(async (com, index) => {
+ cm.map(async (com, index) => {
         if (!coms[com.categorie])
             coms[com.categorie] = [];
         coms[com.categorie].push(com.nomCom);
     });
 
-    moment.tz.setDefault('Etc/GMT');
+    moment.tz.setDefault('EAT');
 
-// Créer une date et une heure en GMT
+// Créer une date et une heure en EAT
 const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
-╭────✧〈 *POP KID BOT* 〉 ✧───◆
-┴╭─────────────☹︎
-𓄂│▸ *Date* : ${date}
-𓄂│▸ *User* : ${s.OWNER_NAME}
-𓄂│▸ *Prefix* : ${s.PREFIXE}
-𓄂│▸ *Mode* : ${mode}
-𓄂│▸ *Commands* : ${cm.length} 
-𓄂│▸ *Ram* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
-𓄂│▸ *Platform* : ${os.platform()}
-𓄂│▸ *Theme* : *POP KID*
-┬╰──────────────☹︎
-╰─── ···▸💰LIKE A BOSS💰··──◆\n\n`;
-    
-let menuMsg = `
-╭──────────✇
-   *POP KID-V1.0.0*
-╰──────────✇
-
- *❄︎AVAILABLE COMMANDS❄︎*
+╭─────GMAX AI-𝐌𝐃──────✰
+┊✰───────────────✰
+┊➪┊ *𝙐𝙎𝙀𝙍* : ${s.OWNER_NAME}
+┊➪┊ *𝙈𝙊𝘿𝙀* : ${mode}
+┊✰───────────────✰
+┊➪┊ *𝙏𝙄𝙈𝙀* : ${temps}  
+┊➪┊ *𝙍𝘼𝙈* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
+┊✰───────────────✰
+╰─────────────────✰ \n\n`;
+ 
+    let menuMsg=`  
+  *GMAX AI-𝐌𝐃  𝘾𝙊𝙈𝙈𝘼𝙉𝘿𝙎*
 `;
 
     for (const cat in coms) {
-        menuMsg += `╭──────☹︎ ${cat} ☹︎`;
+        menuMsg += `*╭────✰* *${cat}`;
         for (const cmd of coms[cat]) {
-            menuMsg += `
-✞│▸ ${cmd}`;
+            menuMsg += `  
+*┊✞︎* ${cmd}`;
         }
         menuMsg += `
-╰────────────···▸▸ \n`
+*╰═════════════✰* \n`
     }
 
     menuMsg += `
-◇            ◇
-*»»————————— ★ ——————————««*
-> POP KID-MD CREATED BY POP KID
-*»»—————————— ★ ——————————««*
+
+     *GMAX AI-𝑴𝑫-𝑩𝑶𝑻-2025*                                         
+*╰═════════════✰*
 `;
 
    var lien = mybotpic();
 
    if (lien.match(/\.(mp4|gif)$/i)) {
     try {
-        zk.sendMessage(dest, { video: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Beltahmd*, déveloper Beltah Tech" , gifPlayback : true }, { quoted: ms });
+        zk.sendMessage(dest, { video: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Zokou-MD*, développé par Djalega++" , gifPlayback : true }, { quoted: ms });
     }
     catch (e) {
         console.log("🥵🥵 Menu erreur " + e);
@@ -84,7 +77,7 @@ let menuMsg = `
 // Vérification pour .jpeg ou .png
 else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
     try {
-        zk.sendMessage(dest, { image: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Beltahmd*, déveloper Beltah Tech" }, { quoted: ms });
+        zk.sendMessage(dest, { image: { url: lien }, caption:infoMsg + menuMsg, footer: "*gmax*" }, { quoted: ms });
     }
     catch (e) {
         console.log("🥵🥵 Menu erreur " + e);
