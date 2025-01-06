@@ -1,5 +1,5 @@
 {
-  "name": "GMAX TECH",
+  "name": "GMAX AI",
   "description": "This BOT was developed by Sir Gmax.",
   "keywords": [
     "bot",
@@ -7,14 +7,14 @@
     "baileys",
     "whatsapp"
   ],
-  "logo": "https://files.catbox.moe/e6ifiq.jpeg",
-  "repository": "https://github.com/CybertechTz/Gmax-AI",
+  "logo": "https://files.catbox.moe/o973mw.jpeg",
+  "repository":  "https://github.com/CybertechTz/Gmax-AI",
   "succes_url": "/",
   "stack": "container",
   "env": {
     "PREFIX": {
       "description": "choose your prefix of bot",
-      "value": ",",
+      "value": ".",
       "required": true
     },
     "AUTO_READ_STATUS": {
@@ -37,6 +37,11 @@
       "value": "no",
       "required": false
     },
+      "AUTO_REACT_STATUS": {
+      "description":"Enter yes for your bot to auto react status",
+      "value":"yes",
+      "required":false
+    },
     "PM_PERMIT": {
       "description": "Other user can't use your bot in pm (type yes to active or no to deactive ; don't write in capital letter)",
       "value": "no",
@@ -49,7 +54,7 @@
     },
     "BOT_MENU_LINKS": {
       "description": "add one or many link for your bot menu  ; eg : url1,url2,url3.....",
-      "value":"https://files.catbox.moe/e6ifiq.jpeg",
+      "value":"https://files.catbox.moe/o973mw.jpeg",
       "required": false
     },
     "PUBLIC_MODE": {
@@ -59,7 +64,7 @@
     },
     "HEROKU_APY_KEY": {
       "description": "insert your heroku api-key (OPTIONAL)",
-      "value" : "HRKU-6650b52e-9f81-4eda-8a1e-bfb12a79dd09", 
+      "value" : "HRKU-5f760b99-03a1-4813-815a-90a94ce42f17", 
       "required": false
     },
     "HEROKU_APP_NAME": {
