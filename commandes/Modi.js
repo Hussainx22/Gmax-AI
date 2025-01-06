@@ -39,7 +39,7 @@ zokou({
         'image': {
           'url': _0x2b1d32[0].thumbnail
         },
-        'caption': "╭─────═━┈┈━═──━┈⊷\n┇ 『 *DOWLODER* 』\n┇ *Bot name : GMAX AI MD* \n┇ *Owner: Gmax Tech* \n╰─────═━┈┈━═──━┈⊷"
+        'caption': "╭─────═━┈┈━═──━┈⊷\n┇ 『 *DOWLODER* 』\n┇ *Bot name : GMAX MD* \n┇ *Owner: Gmax Tech* \n╰─────═━┈┈━═──━┈⊷"
       }, {
         'quoted': _0x254c5b
       });
@@ -88,7 +88,7 @@ zokou({
         'image': {
           'url': _0x46a94d[0].thumbnail
         },
-        'caption': "╭─────═━┈┈━═──━┈⊷\n┇ 『 *DOWLODER* 』\n┇ *Bot name : GMAX AI MD* \n┇ *Owner: Gmax Tech* \n╰─────═━┈┈━═──━┈⊷"
+        'caption': "╭─────═━┈┈━═──━┈⊷\n┇ 『 *DOWLODER* 』\n┇ *Bot name : GMAX MD* \n┇ *Owner: Gmax Tech* \n╰─────═━┈┈━═──━┈⊷"
       }, {
         'quoted': _0x37b28a
       });
@@ -137,7 +137,7 @@ zokou({
         'image': {
           'url': _0x5c635a[0].thumbnail
         },
-        'caption': "╭─────═━┈┈━═──━┈⊷\n┇ 『 *DOWLODER* 』\n┇ *Bot name : GMAX AI MD* \n┇ *Owner: Gmax Tech* \n╰─────═━┈┈━═──━┈⊷"
+        'caption': "╭─────═━┈┈━═──━┈⊷\n┇ 『 *DOWLODER* 』\n┇ *Bot name : Gmax Md* \n┇ *Owner: Gmax Tech* \n╰─────═━┈┈━═──━┈⊷"
       }, {
         'quoted': _0x7bdead
       });
