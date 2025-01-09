@@ -1,8 +1,8 @@
 {
-  "name":"ENZO",
-  "description":"Best whatsapp bot developed by ENZO",
+  "name":"GMAX",
+  "description":"Best whatsapp bot developed by Mr Gmax",
   "keywords":["bot","node","baileys","whatsapp"],
-  "logo":"https://i.ibb.co/hYF7XQw/IMG-20241019-WA0222.jpg",
+  "logo":"https://files.catbox.moe/aoxsyt.jpg",
   "repository":"https://github.com/CybertechTz/Gmax-AI",
   "succes_url":"/",
   "stack":"container",
@@ -35,14 +35,14 @@
     "BOT_NAME" : {
        
       "description":"put A name for your bot",
-      "value":"GMAX",
+      "value":"GMAX AI",
       "required":false
 
     } ,
      "BOT_MENU_LINKS" : {
     
       "description":"add one or many link for your bot menu  ; eg : url1,url2,url3.....",
-      "value":"https://i.ibb.co/qMvsxL8/1680858151-752-x-1584.jpg",
+      "value":"https://files.catbox.moe/aoxsyt.jpg",
       "required":false
        
      },
@@ -79,9 +79,9 @@
     "NUMERO_OWNER":
   {
     
-    "desc": "Your number , dont put '+' and put you area code(exemple of togo '228')",
+    "desc": "Your number , dont put '+' and put you area code(exemple of togo '255')",
     "required":false,
-    "value": "+255 753 853 473"
+    "value": "255622053093"
   },
     "WARN_COUNT":
   {
